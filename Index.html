@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of Agust Alosh RV - Operations, Supply Chain, AI and Analytics." />
+  <title>Agust Alosh RV | Professional Portfolio</title>
+  <style>
+    :root {
+      --navy: #173746;
+      --teal: #087f8c;
+      --ink: #26343b;
+      --muted: #667780;
+      --line: #dce6e8;
+      --soft: #f3f7f7;
+      --white: #ffffff;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: Inter, "Segoe UI", Arial, sans-serif;
+      color: var(--ink);
+      background: #eef3f4;
+      line-height: 1.65;
+    }
+    a { color: inherit; text-decoration: none; }
+    .page { width: min(1100px, calc(100% - 36px)); margin: 34px auto; }
+    .hero {
+      background: var(--navy);
+      color: var(--white);
+      padding: 64px 7%;
+      border-radius: 18px 18px 0 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 330px; height: 330px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 50%;
+      right: -90px; top: -150px;
+      box-shadow: 0 0 0 35px rgba(255,255,255,.035), 0 0 0 70px rgba(255,255,255,.025);
+    }
+    .eyebrow { color: #9bd6d9; text-transform: uppercase; letter-spacing: 3px; font-size: .76rem; font-weight: 700; }
+    h1 { font-size: clamp(2.3rem, 6vw, 4.4rem); line-height: 1.05; margin: 15px 0 12px; letter-spacing: -1.8px; }
+    .tagline { color: #d3e6e8; font-size: 1.05rem; letter-spacing: 1.5px; text-transform: uppercase; }
+    .contact { display: flex; flex-wrap: wrap; gap: 10px 22px; margin-top: 28px; color: #e0edef; font-size: .9rem; }
+    .contact a { border-bottom: 1px solid rgba(255,255,255,.35); }
+    nav {
+      display: flex; flex-wrap: wrap; gap: 22px;
+      background: #fff; padding: 17px 7%;
+      border-bottom: 1px solid var(--line);
+      position: sticky; top: 0; z-index: 10;
+    }
+    nav a { color: var(--muted); font-size: .86rem; font-weight: 700; }
+    nav a:hover { color: var(--teal); }
+    main { background: var(--white); padding: 20px 7% 60px; border-radius: 0 0 18px 18px; }
+    section { padding: 34px 0 12px; border-bottom: 1px solid var(--line); }
+    section:last-child { border-bottom: 0; }
+    .section-label { color: var(--teal); text-transform: uppercase; font-size: .74rem; font-weight: 800; letter-spacing: 2px; }
+    h2 { color: var(--navy); font-size: 1.55rem; margin: 5px 0 18px; letter-spacing: -.4px; }
+    .intro { max-width: 850px; color: #4e5e66; font-size: 1.04rem; }
+    .skills { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .skill-card, .project-card, .education-card, .cert-card {
+      background: var(--soft); border: 1px solid var(--line); border-radius: 12px; padding: 18px;
+    }
+    .skill-card h3 { margin: 0 0 7px; color: var(--navy); font-size: 1rem; }
+    .skill-card p { margin: 0; color: var(--muted); font-size: .92rem; }
+    .timeline { display: grid; gap: 22px; }
+    .job { padding-left: 20px; border-left: 3px solid #a9d7da; }
+    .job-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+    .job h3 { color: var(--navy); margin: 0; font-size: 1.12rem; }
+    .date { color: var(--teal); font-size: .85rem; font-weight: 700; }
+    .company { color: var(--muted); font-weight: 600; margin: 3px 0 9px; }
+    ul { padding-left: 20px; margin: 8px 0 0; }
+    li { margin: 5px 0; color: #4e5e66; }
+    .project-card h3, .education-card h3, .cert-card h3 { color: var(--navy); margin: 0 0 5px; }
+    .project-card p, .education-card p, .cert-card p { color: var(--muted); margin: 0; }
+    .two-col { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 14px; }
+    .achievement { border-left: 4px solid var(--teal); background: var(--soft); padding: 18px 20px; border-radius: 0 10px 10px 0; font-weight: 650; color: var(--navy); }
+    footer { text-align: center; color: var(--muted); font-size: .82rem; padding: 24px 10px 4px; }
+    .top-link { display: inline-block; margin-top: 12px; color: var(--teal); font-weight: 700; }
+    @media (max-width: 680px) {
+      .page { width: min(100% - 20px, 1100px); margin: 10px auto; }
+      .hero { padding: 42px 7%; }
+      nav { gap: 12px 17px; }
+      .skills, .two-col { grid-template-columns: 1fr; }
+      main { padding-left: 7%; padding-right: 7%; }
+    }
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; margin: 0; }
+      .hero, main { border-radius: 0; }
+      nav { position: static; }
+      section { break-inside: avoid; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page" id="top">
+    <header class="hero">
+      <div class="eyebrow">Professional Portfolio</div>
+      <h1>Agust Alosh RV</h1>
+      <div class="tagline">Operations &amp; Supply Chain | AI &amp; Analytics</div>
+      <div class="contact">
+        <span>Tiruvannamalai, Tamil Nadu</span>
+        <a href="tel:+919791741145">+91 9791741145</a>
+        <a href="mailto:agustalosh@gmail.com">agustalosh@gmail.com</a>
+        <a href="https://linkedin.com/in/agust-alosh-163900296" target="_blank" rel="noopener">LinkedIn Profile</a>
+      </div>
+    </header>
+
+    <nav aria-label="Main navigation">
+      <a href="#profile">Profile</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Project</a>
+      <a href="#education">Education</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#achievement">Achievement</a>
+    </nav>
+
+    <main>
+      <section id="profile">
+        <div class="section-label">01 / Introduction</div>
+        <h2>Professional Profile</h2>
+        <p class="intro">
+          PGDM student focused on Operations &amp; Supply Chain, with additional learning in Analytics &amp; AI.
+          Internship experience in manufacturing operations, order management, documentation, audit support,
+          and coordination across departments. Also experienced in B2B lead generation, market research, CRM,
+          and marketing activities. Interested in entry-level opportunities in Operations and Supply Chain.
+        </p>
+      </section>
+
+      <section id="capabilities">
+        <div class="section-label">02 / What I Bring</div>
+        <h2>Core Capabilities</h2>
+        <div class="skills">
+          <article class="skill-card">
+            <h3>Operations &amp; Supply Chain</h3>
+            <p>Order Management · Manufacturing Operations · Operations Coordination · Process Coordination</p>
+          </article>
+          <article class="skill-card">
+            <h3>Tools &amp; Analytics</h3>
+            <p>MS Excel · Tableau (Basics) · Power BI (Basics) · Data Analysis · Data Visualization</p>
+          </article>
+          <article class="skill-card">
+            <h3>B2B &amp; Marketing</h3>
+            <p>B2B Lead Generation · Market Research · CRM · Apollo.io · LinkedIn · Email Outreach · Digital Marketing</p>
+          </article>
+          <article class="skill-card">
+            <h3>Documentation</h3>
+            <p>GP Sheet &amp; Costing Verification · Commercial Documentation · Record Maintenance</p>
+          </article>
+          <article class="skill-card">
+            <h3>Professional Skills</h3>
+            <p>Systems Thinking · Analytical Problem Solving · Decision-Making · Team Collaboration</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience">
+        <div class="section-label">03 / Career Journey</div>
+        <h2>Professional Experience</h2>
+        <div class="timeline">
+          <article class="job">
+            <div class="job-top">
+              <h3>Operations Associate Intern</h3>
+              <span class="date">June 2026 – August 2026</span>
+            </div>
+            <div class="company">Flow Link Systems (A Voith Group Company)</div>
+            <ul>
+              <li>Handled documentation for enquiries, quotations, GP sheets, orders, contract review, and customer records.</li>
+              <li>Checked GP sheets and costing details and prepared documents for audit-related work.</li>
+              <li>Supported ADNOC vendor registration through document collection, verification, and record preparation.</li>
+              <li>Coordinated with Sales, Planning, Purchase, Production, Quality, and HR for routine operational requirements.</li>
+              <li>Learned how foundry, machining, assembly, and testing operations work and used MS Excel and the company ERP system for day-to-day work.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-top">
+              <h3>B2B Growth &amp; Lead Intelligence Intern</h3>
+              <span class="date">March 2026 – May 2026</span>
+            </div>
+            <div class="company">V3 Data Intelligence Private Limited</div>
+            <ul>
+              <li>Researched B2B companies and prospects through LinkedIn and online sources.</li>
+              <li>Maintained lead lists and CRM records using Excel and Google Sheets.</li>
+              <li>Handled LinkedIn and email outreach, lead qualification, and follow-ups.</li>
+              <li>Used ChatGPT and Gemini for research and preparing outreach content.</li>
+            </ul>
+          </article>
+
+          <article class="job">
+            <div class="job-top">
+              <h3>Product Marketing Intern</h3>
+              <span class="date">September 2025 – November 2025</span>
+            </div>
+            <div class="company">ANGLER Technologies India Pvt Ltd</div>
+            <ul>
+              <li>Researched prospects and collected company information using Apollo.io for marketing activities.</li>
+              <li>Prepared data and documentation and coordinated with internal teams on project requirements.</li>
+              <li>Worked on B2B marketing and business development activities for IT services.</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="section-label">04 / Applied Learning</div>
+        <h2>Selected Project</h2>
+        <article class="project-card">
+          <h3>Manufacturing Downtime Analysis Dashboard</h3>
+          <p><strong>Tool:</strong> Tableau</p>
+          <ul>
+            <li>Built a Tableau dashboard to analyze manufacturing downtime data and identify the main downtime contributors.</li>
+            <li>Completed as part of the Deloitte Data Analytics Job Simulation on Forage.</li>
+          </ul>
+        </article>
+      </section>
+
+      <section id="education">
+        <div class="section-label">05 / Academic Background</div>
+        <h2>Education</h2>
+        <div class="two-col">
+          <article class="education-card">
+            <h3>PGDM</h3>
+            <p><strong>Operations &amp; Logistics &amp; Supply Chain Management; Analytics &amp; AI</strong></p>
+            <p>Firebird Institute of Research in Management</p>
+            <p>2025 – Present</p>
+          </article>
+          <article class="education-card">
+            <h3>Bachelor of Computer Applications (BCA)</h3>
+            <p>Hindustan College of Arts and Science, Chennai</p>
+            <p>Affiliated to University of Madras</p>
+            <p>2022 – 2025</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="certifications">
+        <div class="section-label">06 / Continuous Learning</div>
+        <h2>Certifications</h2>
+        <div class="two-col">
+          <article class="cert-card">
+            <h3>Data Analytics Job Simulation</h3>
+            <p>Forage (Deloitte) · August 2026</p>
+          </article>
+          <article class="cert-card">
+            <h3>ABC’s of Supply Chain</h3>
+            <p>SWAYAM · June 2026</p>
+          </article>
+          <article class="cert-card">
+            <h3>Supply Chain Digitization</h3>
+            <p>NPTEL · April 2026</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="achievement">
+        <div class="section-label">07 / Recognition</div>
+        <h2>Achievement</h2>
+        <div class="achievement">
+          Runner-Up, MBA Gauntlet — Coimbatore Management Association, Student Management Day (January 2026).
+        </div>
+      </section>
+
+      <footer>
+        © 2026 Agust Alosh RV · Professional Portfolio
+        <br />
+        <a class="top-link" href="#top">Back to top ↑</a>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
